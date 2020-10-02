@@ -1,13 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./app/layout/App";
+import ScrollToTop from "./app/layout/ScrollToTop";
 import "./app/layout/styles.css";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <ScrollToTop>
+      <App />
+    </ScrollToTop>
+  </Router>,
   document.getElementById("root")
 );
 
